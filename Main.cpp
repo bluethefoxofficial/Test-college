@@ -5,9 +5,14 @@
 #include <windows.h>
 #include "Main.h"
 
-using std::cout;
-using std::cin;
-using std::string;
+
+using std::cout; using std::string;
+using std::endl; using std::cin;
+using std::transform; using std::toupper;
+
+
+
+
 int main() {
 	string x;
 	cout << "what if your name\n" << "name>";
@@ -24,25 +29,22 @@ int main() {
 	".----","..---","...--","....-",".....","-....","--....","---..","----.","-----" };
 
 	//convert string to upper case
-
-	string upperc = capitalizeString(x);
-
+	std::transform(x.begin(), x.end(), x.begin(), ::toupper);
 	//holding point for the output morse code.
 
 	string morsefied;
 
-	for (int i = 0; i < upperc.length(); i++)
+	for (int i = 0; i < x.length(); i++)
 	{
-		if (x.at(i) == text[i])
-		{
-			std::cout << morse[i];
-			soundplayer(morse[i]);
-		}
+	
+
 	}
 
 
 	return 0;
 }
+
+//audio related functions and soundplayer initilizer
 int dot()
 {
 	Beep(900, 100);
@@ -54,7 +56,7 @@ int dash()
 	Beep(900, 300);
 	return 0;
 }
-int soundplayer(string x)
+bool soundplayer(string x)
 {
 	if (x == ".-")
 	{
@@ -76,11 +78,7 @@ int soundplayer(string x)
 		dot();
 	}
 
-	return 0;
+	return true;
 }
-string capitalizeString(string s)
-{
-	transform(s.begin(), s.end(), s.begin(),
-		[](unsigned char c) { return toupper(c); });
-	return s;
-}
+
+
