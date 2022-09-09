@@ -1,6 +1,9 @@
 
+#include <string>
 #include <iostream>
 #include <algorithm>
+#include <windows.h>
+#include "Main.h"
 
 using std::cout;
 using std::cin;
@@ -20,18 +23,64 @@ int main() {
 	string morse[36] = { ".-","-...","-.-.","-..",".","..-","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--..",
 	".----","..---","...--","....-",".....","-....","--....","---..","----.","-----" };
 
-	for (int i = 0; i < x.length(); i++) {
+	//convert string to upper case
 
-		if (phrase.at(i) == text[counter])
+	string upperc = capitalizeString(x);
+
+	//holding point for the output morse code.
+
+	string morsefied;
+
+	for (int i = 0; i < upperc.length(); i++)
+	{
+		if (x.at(i) == text[i])
 		{
-			std::cout << morse[counter];
-			
+			std::cout << morse[i];
+			soundplayer(morse[i]);
 		}
-
 	}
 
 
 	return 0;
 }
+int dot()
+{
+	Beep(900, 100);
+	return 0;
+}
 
+int dash()
+{
+	Beep(900, 300);
+	return 0;
+}
+int soundplayer(string x)
+{
+	if (x == ".-")
+	{
+		dot();
+		dash();
+	}
+	else if (x == "-...")
+	{
+		dash();
+		dot();
+		dot();
+		dot();
+	}
+	else if (x == "-.-.")
+	{
+		dash();
+		dot();
+		dash();
+		dot();
+	}
 
+	return 0;
+}
+string capitalizeString(string s)
+{
+	transform(s.begin(), s.end(), s.begin(),
+		[](unsigned char c) { return toupper(c); });
+	return s;
+}
