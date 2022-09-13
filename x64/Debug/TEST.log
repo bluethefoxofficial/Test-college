@@ -1,7 +1,6 @@
 ﻿  Main.cpp
-H:\CPP PROJECTS\TEST\TEST\Test-college\Main.cpp(33,69): error C2440: 'initializing': cannot convert from '_OutIt' to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
-          with
-          [
-              _OutIt=std::_String_iterator<std::_String_val<std::_Simple_types<char>>>
-          ]
-H:\CPP PROJECTS\TEST\TEST\Test-college\Main.cpp(33,16): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\bluet\Documents\repo\Test-college\Main.h(12,18): error C2065: 'string': undeclared identifier
+C:\Users\bluet\Documents\repo\Test-college\Main.h(12,25): error C2146: syntax error: missing ')' before identifier 'x'
+C:\Users\bluet\Documents\repo\Test-college\Main.cpp(51,2): error C2064: term does not evaluate to a function taking 1 arguments
+C:\Users\bluet\Documents\repo\Test-college\Main.cpp(70,6): error C2365: 'soundplayer': redefinition; previous definition was 'data variable'
+C:\Users\bluet\Documents\repo\Test-college\Main.h(12): message : see declaration of 'soundplayer'

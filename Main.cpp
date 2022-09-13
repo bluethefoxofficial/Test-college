@@ -34,11 +34,22 @@ int main() {
 
 	string morsefied;
 
-	for (int i = 0; i < x.length(); i++)
-	{
-	
-
+	//string to morse code
+	for (int i = 0; i < x.length(); i++) {
+		for (int j = 0; j < 36; j++) {
+			if (x[i] == text[j]) {
+				morsefied += morse[j];
+				morsefied += " ";
+			}
+		}
 	}
+
+	//output morse code
+	cout << morsefied << endl;
+
+	//beep the morse code
+	soundplayer(morsefied);
+
 
 
 	return 0;
