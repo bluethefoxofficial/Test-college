@@ -47,49 +47,22 @@ int main() {
 	//output morse code
 	cout << morsefied << endl;
 
-	//beep the morse code
-	soundplayer(morsefied);
+	//beep the morse code 
+	for (int i = 0; i < morsefied.length(); i++) {
+		if (morsefied[i] == '.') {
+			Beep(1000, 100);
+		}
+		else if (morsefied[i] == '-') {
+			Beep(1000, 300);
+		}
+		else if (morsefied[i] == ' ') {
+			Sleep(300);
+		}
+	}
 
 
 
 	return 0;
-}
-
-//audio related functions and soundplayer initilizer
-int dot()
-{
-	Beep(900, 100);
-	return 0;
-}
-
-int dash()
-{
-	Beep(900, 300);
-	return 0;
-}
-bool soundplayer(string x)
-{
-	if (x == ".-")
-	{
-		dot();
-		dash();
-	}
-	else if (x == "-...")
-	{
-		dash();
-		dot();
-		dot();
-		dot();
-	}
-	else if (x == "-.-.")
-	{
-		dash();
-		dot();
-		dash();
-		dot();
-	}
-
-	return true;
 }
 
 
