@@ -1,6 +1,2 @@
 ﻿  Main.cpp
-C:\Users\bluet\Documents\repo\Test-college\Main.h(12,18): error C2065: 'string': undeclared identifier
-C:\Users\bluet\Documents\repo\Test-college\Main.h(12,25): error C2146: syntax error: missing ')' before identifier 'x'
-C:\Users\bluet\Documents\repo\Test-college\Main.cpp(51,2): error C2064: term does not evaluate to a function taking 1 arguments
-C:\Users\bluet\Documents\repo\Test-college\Main.cpp(70,6): error C2365: 'soundplayer': redefinition; previous definition was 'data variable'
-C:\Users\bluet\Documents\repo\Test-college\Main.h(12): message : see declaration of 'soundplayer'
+  TEST.vcxproj -> C:\Users\bluet\Documents\repo\Test-college\x64\Debug\TEST.exe
