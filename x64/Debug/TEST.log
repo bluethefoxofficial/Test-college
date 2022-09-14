@@ -1,2 +1,3 @@
 ﻿  Main.cpp
-  TEST.vcxproj -> C:\Users\bluet\Documents\repo\Test-college\x64\Debug\TEST.exe
+H:\CPP PROJECTS\TEST\TEST\Test-college\Main.cpp(67): warning C4717: 'main': recursive on all control paths, function will cause runtime stack overflow
+  TEST.vcxproj -> H:\CPP PROJECTS\TEST\TEST\Test-college\x64\Debug\TEST.exe

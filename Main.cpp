@@ -14,8 +14,9 @@ using std::transform; using std::toupper;
 
 
 int main() {
+	
 	string x;
-	cout << "what if your name\n" << "name>";
+	cout << "what if your name\n" << "$name>";
 	//input name from user.
 	cin >> x;
 	//output the name with hello so "hello example name"
@@ -44,24 +45,26 @@ int main() {
 		}
 	}
 
+
 	//output morse code
 	cout << morsefied << endl;
 
 	//beep the morse code 
 	for (int i = 0; i < morsefied.length(); i++) {
 		if (morsefied[i] == '.') {
-			Beep(1000, 100);
+			Beep(800, 100);
 		}
 		else if (morsefied[i] == '-') {
-			Beep(1000, 300);
+			Beep(800, 300);
 		}
 		else if (morsefied[i] == ' ') {
 			Sleep(300);
 		}
 	}
 
+	morsif
 
-
+	main();
 	return 0;
 }
 
